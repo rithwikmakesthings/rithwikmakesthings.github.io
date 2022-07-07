@@ -1,8 +1,8 @@
 main:
-  - title: "Projects"
-    url: /posts/
   - title: "Portfolio"
     url: /portfolio/
+  - title: "Archive"
+    url: /posts/
 #  - title: "Tags"
 #    url: /tags/
   - title: "About"

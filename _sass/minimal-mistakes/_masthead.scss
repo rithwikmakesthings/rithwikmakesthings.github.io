@@ -4,7 +4,10 @@
 
 .masthead {
   position: relative;
-  background: $border-color;
+  background-image: url(/assets/images/dust.png);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 
 
   border-bottom: 1px solid $border-color;
