@@ -56,9 +56,11 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+background: "/assets/images/bg.jpg"
+
 author:
   name   : "Rithwik Sathyan"
-  #avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-photo.jpg"
   bio    : "A record of hyperfixations past and present"
   links:
 
