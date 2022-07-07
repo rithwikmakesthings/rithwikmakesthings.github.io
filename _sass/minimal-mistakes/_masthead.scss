@@ -4,6 +4,9 @@
 
 .masthead {
   position: relative;
+  background: $border-color;
+
+
   border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -54,11 +57,13 @@
 }
 
 .site-subtitle {
+
   display: block;
   font-size: $type-size-8;
 }
 
 .masthead__menu {
+
   float: left;
   margin-left: 0;
   margin-right: 0;
@@ -74,6 +79,7 @@
   }
 
   ul {
+
     margin: 0;
     padding: 0;
     clear: both;
@@ -83,6 +89,7 @@
 
 .masthead__menu-item {
   display: block;
+
   list-style-type: none;
   white-space: nowrap;
 

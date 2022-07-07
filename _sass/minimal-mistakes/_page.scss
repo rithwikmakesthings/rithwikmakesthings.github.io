@@ -20,6 +20,12 @@
 }
 
 body {
+	background-image: url(/assets/images/bgg.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,14 +34,8 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
           flex-direction: column;
- background-image: url(/assets/images/bg.jpg);
- position: relative;
- min-height: 100vh;
- background-size: cover;
- background-position: center;
- display: flex;
- justify-content: center;
- align-items: center;
+
+
 
 }
 

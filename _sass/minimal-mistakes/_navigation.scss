@@ -90,7 +90,6 @@
       &.current,
       &.current.disabled {
         color: #fff;
-        background: $primary-color;
       }
 
       &.disabled {
@@ -177,7 +176,7 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: $background-color;
+  background: transparent;
 
   a {
     display: block;
