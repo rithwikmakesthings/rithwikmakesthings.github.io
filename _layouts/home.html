@@ -4,7 +4,7 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Home Page" }}</h3>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -12,11 +12,30 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+{%- if posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in posts -%}
+    <li>
+      <span class="post-meta">
+        {{ post.date | date: date_format }}
+        {% for tag in post.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+          <a class="post-tag" href="/tags/{{ tag_name }}"><nobr>{{ tag_name }}</nobr>&nbsp;</a>
+        {% endfor %}
+      </span>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {%- if post.excerpt -%}
+        {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
 
 {% include paginator.html %}
