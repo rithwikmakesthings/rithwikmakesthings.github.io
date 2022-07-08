@@ -1,0 +1,37 @@
+name: Sync Notion
+
+on:
+  # run every 10 minutes, or on manual trigger
+  schedule:
+  - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+
+jobs:
+  sync_notion:
+    runs-on: ubuntu-20.04
+    env:
+      NOTION_KEY: "secret_TFSe1TGtwgzDo9a3W09oCPVYGRQ5LBeQJG6I3GDJAXr"
+      NOTION_DATABASE_ID: "0d52c47272f34122af74fdea41c7f1c3"
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14.17.0'
+    - name: Install Dependencies
+      working-directory: ./scripts/notion
+      run: npm ci
+    - name: Run Sync Notion
+      working-directory: ./scripts/notion
+      run: npm run sync
+    - name: Get Commit Message
+      run: |
+        echo "COMMIT_MESSAGE<<EOF" >> $GITHUB_ENV
+        if [ -f ./COMMIT_MESSAGE ]; then cat ./COMMIT_MESSAGE >> $GITHUB_ENV; else echo "" >> $GITHUB_ENV; fi
+        echo "EOF" >> $GITHUB_ENV
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v7
+      with:
+        default_author: github_actions
+        signoff: true
+        message: ${{ env.COMMIT_MESSAGE }}
