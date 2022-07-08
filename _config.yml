@@ -125,7 +125,7 @@ collections:
   tags:
     tag: true
     output: true
-    permalink: tags/:path/
+    permalink: /tags/:path/
 
 exclude:
   - .sass-cache/

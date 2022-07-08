@@ -29,8 +29,8 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
-$header-font-family: $sans-serif !default;
+$global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$header-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $caption-font-family: $serif !default;
 
 /* type scale */
@@ -91,8 +91,8 @@ $dribbble-color: #ea4c89 !default;
 $facebook-color: #3b5998 !default;
 $flickr-color: #ff0084 !default;
 $foursquare-color: #0072b1 !default;
-$github-color: #171516 !default;
-$gitlab-color: #e24329 !default;
+$github-color: #888888 !default;
+$gitlab-color: #ffffff !default;
 $instagram-color: #517fa4 !default;
 $keybase-color: #ef7639 !default;
 $lastfm-color: #d51007 !default;

@@ -9,17 +9,21 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.5;
 
-  &.overflow--hidden {
-    /* when primary navigation is visible, the content in the background won't scroll */
-    overflow: hidden;
-  }
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
 
 h1,
 h2,
@@ -195,16 +199,14 @@ figure {
   -webkit-box-align: start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 2em 0;
 
   img,
   iframe,
   .fluid-width-video-wrapper {
-    margin-bottom: 1em;
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
     border-radius: $border-radius;
     -webkit-transition: $global-transition;
     transition: $global-transition;
@@ -337,3 +339,52 @@ input[type="submit"],
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+
+  margin-right: auto;
+  margin-left: auto;
+
+  @extend %clearfix;
+
+
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/**
+ * Icons
+ */
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    fill: #ffffff;
+    padding-right: 5px;
+    vertical-align: text-top;
+}
+
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}
+
+
