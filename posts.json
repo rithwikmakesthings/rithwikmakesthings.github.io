@@ -1,5 +1,5 @@
 {
-  "last_sync": "2022-07-08T08:38:13.057Z",
+  "last_sync": "2022-07-08T10:54:01.595Z",
   "posts": [
     {
       "id": "9b18c0ec-1e5f-496b-aed9-9ac367149695",
@@ -48,27 +48,6 @@
       "title": "Raspi",
       "filename": "2021-07-02-raspi.html",
       "date": "2021-07-02T00:00:00.000Z",
-      "last_edited_time": "2022-07-08T00:24:00.000Z"
-    },
-    {
-      "id": "21c17408-03c1-4199-9570-6e89b9bf70ec",
-      "title": "Raspberry Pi Media Server with Mini DLNA",
-      "filename": "2021-07-02-raspberry-pi-media-server-with-mini-dlna.html",
-      "date": "2021-07-02T00:00:00.000Z",
-      "last_edited_time": "2022-07-08T00:24:00.000Z"
-    },
-    {
-      "id": "fa16661b-c849-4cc0-953e-5fb88efb5168",
-      "title": "Installing Fancy Index Module on Nginx",
-      "filename": "2022-04-06-installing-fancy-index-module-on-nginx.html",
-      "date": "2022-04-06T00:00:00.000Z",
-      "last_edited_time": "2022-07-08T00:24:00.000Z"
-    },
-    {
-      "id": "7aa5192a-e729-400a-91f2-6fde06f3cdb0",
-      "title": "Bytes to String",
-      "filename": "2022-06-20-bytes-to-string.html",
-      "date": "2022-06-20T00:00:00.000Z",
       "last_edited_time": "2022-07-08T00:24:00.000Z"
     },
     {
