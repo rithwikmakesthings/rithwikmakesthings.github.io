@@ -1,6 +1,12 @@
 /* ==========================================================================
    SINGLE PAGE/POST
    ========================================================================== */
+$white: #fff;
+$blue: #dcfffb;
+$green: #b5ead6;
+$yellow: #f6eac2;
+$pink: #ffe1e9;
+
 
 #main {
   @include clearfix;
@@ -20,9 +26,17 @@
 }
 
 body {
-	background-image: url(/assets/images/bgg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+  
+  // I do like these colours
+  /* background: 
+    radial-gradient(circle at bottom, #fff -30%, transparent 70%),
+    linear-gradient(to right, #134a8e, #00b6f1 50%),
+    #fff; */
+  
+  background: 
+    linear-gradient(to bottom, transparent, rgba($white, 0.4) 70%),
+    $white;  
+  animation: bg 360s infinite;
 
 
   display: -webkit-box;
@@ -36,6 +50,13 @@ body {
 
 
 
+}
+
+@keyframes bg {
+  0%, 100% { background-color: $pink; }
+  25% { background-color: $green; }
+  50% { background-color: $yellow; }
+  75% { background-color: $blue; }
 }
 
 .initial-content,
