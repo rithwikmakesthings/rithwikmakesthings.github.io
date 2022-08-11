@@ -1,5 +1,5 @@
 {
-  "last_sync": "2022-08-10T22:45:45.487Z",
+  "last_sync": "2022-08-11T04:22:40.131Z",
   "posts": [
     {
       "id": "0f7431b1-7985-4395-a615-3bef2a1adebf",
@@ -7,13 +7,6 @@
       "filename": "2021-03-06-welcome-to-jekyll.html",
       "date": "2021-03-06T00:36:00.000Z",
       "last_edited_time": "2022-07-08T13:00:00.000Z"
-    },
-    {
-      "id": "d2168c49-7736-4839-af64-d1862aea398f",
-      "title": "Bridge and Hardware",
-      "filename": "2022-07-05-bridge-and-hardware.html",
-      "date": "2022-07-05T23:24:00.000Z",
-      "last_edited_time": "2022-08-10T22:35:00.000Z"
     },
     {
       "id": "9b3456a9-3f8e-46b8-b022-9384aa2ca234",
@@ -28,6 +21,13 @@
       "filename": "2022-07-08-sleep-token-vessel-mask.html",
       "date": "2022-07-08T00:00:00.000Z",
       "last_edited_time": "2022-07-08T12:42:00.000Z"
+    },
+    {
+      "id": "d2168c49-7736-4839-af64-d1862aea398f",
+      "title": "Bridge and Hardware",
+      "filename": "2022-08-11-bridge-and-hardware.html",
+      "date": "2022-08-11T00:00:00.000Z",
+      "last_edited_time": "2022-08-11T04:07:00.000Z"
     }
   ]
 }
