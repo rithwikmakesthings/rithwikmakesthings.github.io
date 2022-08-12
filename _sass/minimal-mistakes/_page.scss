@@ -29,7 +29,7 @@ body {
   background-color: #ecf3f3;
   background-size: cover;
 
-  overflow:hidden;
+  //overflow:hidden;
 
   
 
@@ -40,11 +40,15 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 
 
 
 }
+
+
+
+
 
 .firefly {
   position: fixed;
@@ -55,6 +59,7 @@ body {
   margin: -0.2vw 0 0 9.8vw;
   animation: ease 200s alternate infinite;
   pointer-events: none;
+  filter: blur(6px);
 
 }
 .firefly::before, .firefly::after {
