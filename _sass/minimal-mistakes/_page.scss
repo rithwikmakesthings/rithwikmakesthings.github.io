@@ -24,7 +24,6 @@ $black: #000;
 
 body {
   
-  // I do like these colours
  
   background-color: #ecf3f3;
   background-size: cover;
@@ -53,44 +52,62 @@ body {
   width: 0.6vw;
   height: 0.6vw;
   margin: -0.2vw 0 0 9.8vw;
-  animation: ease 200s alternate infinite;
+  animation: ease 100s alternate infinite;
+  border-radius: 50%;
   pointer-events: none;
 }
-.firefly::before, .firefly::after {
+.firefly::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   transform-origin: -10vw;
-}
-.firefly::before {
+  animation: drift ease alternate infinite;
   background: transparent;
   opacity: 0;
-  animation: drift ease alternate infinite;
+
 }
-.firefly::after {
+
+.firefly::after{
   background: black;
   opacity: 0;
   box-shadow: 0 0 0vw 0vw yellow;
   animation: drift ease alternate infinite, flash ease infinite;
 }
 
-.firefly:nth-child(1) {
-  animation-name: move1;
+@for $i from 1 through 15{
+  .firefly:nth-child(#{$i}){
+    animation-name: move#{$i};
+		$size: random(10) + 5 + px;
+		height: $size;
+		width: $size;
+		animation-delay: random(10) * -0.1s;
+		//transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: hsl(random(360), 70%, 50%);
+	}
+  .firefly:nth-child(#{$i})::before {
+    background: transparent;
+    animation-duration: random(20) * 1s;
+    animation: drift ease alternate infinite;
+
+
+  }
+  .firefly:nth-child(#{$i})::after {
+    background: transparent;
+    animation: drift ease alternate infinite, flash ease infinite;
+
+    animation-duration: random(20) * 1s, random(800) * 0.1s;
+    animation-delay: 0ms, random(8000) * 0.1s;
+  }
 }
-.firefly:nth-child(1)::before {
-  animation-duration: 18s;
-}
-.firefly:nth-child(1)::after {
-  animation-duration: 18s, 6526ms;
-  animation-delay: 0ms, 5678ms;
-}
+
 
 
 @keyframes move1 {
   0% {
     transform: translateX(-44vw) translateY(50vh) scale(0.5);
+    opacity: 0;
   }
   5.8823529412% {
     transform: translateX(-9vw) translateY(-44vh) scale(0.29);
@@ -142,18 +159,11 @@ body {
   }
   100% {
     transform: translateX(40vw) translateY(16vh) scale(0.3);
+    opacity: 1;
   }
 }
-.firefly:nth-child(2) {
-  animation-name: move2;
-}
-.firefly:nth-child(2)::before {
-  animation-duration: 9s;
-}
-.firefly:nth-child(2)::after {
-  animation-duration: 9s, 6101ms;
-  animation-delay: 0ms, 7549ms;
-}
+
+
 
 @keyframes move2 {
   0% {
@@ -214,16 +224,8 @@ body {
     transform: translateX(25vw) translateY(-13vh) scale(0.46);
   }
 }
-.firefly:nth-child(3) {
-  animation-name: move3;
-}
-.firefly:nth-child(3)::before {
-  animation-duration: 18s;
-}
-.firefly:nth-child(3)::after {
-  animation-duration: 18s, 9585ms;
-  animation-delay: 0ms, 8175ms;
-}
+
+
 
 @keyframes move3 {
   0% {
@@ -296,16 +298,7 @@ body {
     transform: translateX(39vw) translateY(17vh) scale(0.62);
   }
 }
-.firefly:nth-child(4) {
-  animation-name: move4;
-}
-.firefly:nth-child(4)::before {
-  animation-duration: 14s;
-}
-.firefly:nth-child(4)::after {
-  animation-duration: 14s, 6256ms;
-  animation-delay: 0ms, 8046ms;
-}
+
 
 @keyframes move4 {
   0% {
@@ -363,16 +356,8 @@ body {
     transform: translateX(25vw) translateY(-11vh) scale(0.87);
   }
 }
-.firefly:nth-child(5) {
-  animation-name: move5;
-}
-.firefly:nth-child(5)::before {
-  animation-duration: 12s;
-}
-.firefly:nth-child(5)::after {
-  animation-duration: 12s, 6786ms;
-  animation-delay: 0ms, 6049ms;
-}
+
+
 
 @keyframes move5 {
   0% {
@@ -451,16 +436,7 @@ body {
     transform: translateX(42vw) translateY(-3vh) scale(0.95);
   }
 }
-.firefly:nth-child(6) {
-  animation-name: move6;
-}
-.firefly:nth-child(6)::before {
-  animation-duration: 16s;
-}
-.firefly:nth-child(6)::after {
-  animation-duration: 16s, 10765ms;
-  animation-delay: 0ms, 992ms;
-}
+
 
 @keyframes move6 {
   0% {
@@ -517,16 +493,6 @@ body {
   100% {
     transform: translateX(-3vw) translateY(43vh) scale(0.67);
   }
-}
-.firefly:nth-child(7) {
-  animation-name: move7;
-}
-.firefly:nth-child(7)::before {
-  animation-duration: 13s;
-}
-.firefly:nth-child(7)::after {
-  animation-duration: 13s, 7669ms;
-  animation-delay: 0ms, 8461ms;
 }
 
 @keyframes move7 {
@@ -603,16 +569,6 @@ body {
     transform: translateX(30vw) translateY(-39vh) scale(0.69);
   }
 }
-.firefly:nth-child(8) {
-  animation-name: move8;
-}
-.firefly:nth-child(8)::before {
-  animation-duration: 18s;
-}
-.firefly:nth-child(8)::after {
-  animation-duration: 18s, 6076ms;
-  animation-delay: 0ms, 4496ms;
-}
 
 @keyframes move8 {
   0% {
@@ -679,16 +635,7 @@ body {
     transform: translateX(17vw) translateY(-17vh) scale(0.41);
   }
 }
-.firefly:nth-child(9) {
-  animation-name: move9;
-}
-.firefly:nth-child(9)::before {
-  animation-duration: 16s;
-}
-.firefly:nth-child(9)::after {
-  animation-duration: 16s, 6506ms;
-  animation-delay: 0ms, 7850ms;
-}
+
 
 @keyframes move9 {
   0% {
@@ -776,16 +723,8 @@ body {
     transform: translateX(21vw) translateY(-27vh) scale(0.82);
   }
 }
-.firefly:nth-child(10) {
-  animation-name: move10;
-}
-.firefly:nth-child(10)::before {
-  animation-duration: 16s;
-}
-.firefly:nth-child(10)::after {
-  animation-duration: 16s, 10829ms;
-  animation-delay: 0ms, 7260ms;
-}
+
+
 
 @keyframes move10 {
   0% {
@@ -861,16 +800,7 @@ body {
     transform: translateX(-44vw) translateY(31vh) scale(0.83);
   }
 }
-.firefly:nth-child(11) {
-  animation-name: move11;
-}
-.firefly:nth-child(11)::before {
-  animation-duration: 16s;
-}
-.firefly:nth-child(11)::after {
-  animation-duration: 16s, 6928ms;
-  animation-delay: 0ms, 860ms;
-}
+
 
 @keyframes move11 {
   0% {
@@ -939,16 +869,6 @@ body {
   100% {
     transform: translateX(0vw) translateY(-13vh) scale(0.61);
   }
-}
-.firefly:nth-child(12) {
-  animation-name: move12;
-}
-.firefly:nth-child(12)::before {
-  animation-duration: 17s;
-}
-.firefly:nth-child(12)::after {
-  animation-duration: 17s, 6738ms;
-  animation-delay: 0ms, 972ms;
 }
 
 @keyframes move12 {
@@ -1028,16 +948,8 @@ body {
     transform: translateX(29vw) translateY(1vh) scale(0.56);
   }
 }
-.firefly:nth-child(13) {
-  animation-name: move13;
-}
-.firefly:nth-child(13)::before {
-  animation-duration: 12s;
-}
-.firefly:nth-child(13)::after {
-  animation-duration: 12s, 9401ms;
-  animation-delay: 0ms, 7768ms;
-}
+
+
 
 @keyframes move13 {
   0% {
@@ -1115,16 +1027,6 @@ body {
   100% {
     transform: translateX(-7vw) translateY(-29vh) scale(0.89);
   }
-}
-.firefly:nth-child(14) {
-  animation-name: move14;
-}
-.firefly:nth-child(14)::before {
-  animation-duration: 17s;
-}
-.firefly:nth-child(14)::after {
-  animation-duration: 17s, 10298ms;
-  animation-delay: 0ms, 4010ms;
 }
 
 @keyframes move14 {
@@ -1216,16 +1118,7 @@ body {
     transform: translateX(25vw) translateY(33vh) scale(0.86);
   }
 }
-.firefly:nth-child(15) {
-  animation-name: move15;
-}
-.firefly:nth-child(15)::before {
-  animation-duration: 13s;
-}
-.firefly:nth-child(15)::after {
-  animation-duration: 13s, 9639ms;
-  animation-delay: 0ms, 3424ms;
-}
+
 
 @keyframes move15 {
   0% {
@@ -1324,13 +1217,14 @@ body {
 @keyframes flash {
   0%, 30%, 100% {
     opacity: 0;
-    box-shadow: 0 0 0vw 0vw white;
+    box-shadow: 0 0 0vw 0vw transparent;
   }
   20% {
     opacity: 1;
-    box-shadow: 0 0 2vw 0vw #101010;
+    box-shadow: 0 0 2vw 0vw currentColor;
   }
 }
+
 
 .initial-content,
 .search-content {
